@@ -34,7 +34,6 @@ class Annict {
         ]);
 
         $json = json_decode($res->getBody());
-        var_dump($json);
         if (!isset($json->access_token)) {
             return $json->error;
         }
@@ -44,7 +43,6 @@ class Annict {
             ],
         ]);
         $user_res = json_decode($user_res->getBody());
-        var_dump($user_res);
         return new Annict($json->access_token, $user_res->username);
     }
 

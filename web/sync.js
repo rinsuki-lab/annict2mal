@@ -39,4 +39,11 @@ startButton.addEventListener("click", async () => {
     }
 
     log(`同期が完了しました`)
+    if (annictList.length !== annictListAll.length) {
+        log("--- Annict データのうち MyAnimeList ID が指定されていないもの ---")
+        for (const a of annictListAll) {
+            if (a.malAnimeId == null) log(`${a.title} https://annict.com/works/${a.annictId}`)
+        }
+        log("--- ここまで ---")
+    }
 })

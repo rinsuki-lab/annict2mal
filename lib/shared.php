@@ -17,7 +17,7 @@ function check_csrf_token() {
     if (!isset($_GET["ct"])) {
         return false;
     }
-    if ($_GET["ct"] != get_csrf_token()) {
+    if ($_GET["ct"] !== get_csrf_token()) {
         return false;
     }
     return true;

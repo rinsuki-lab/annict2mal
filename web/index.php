@@ -25,7 +25,9 @@ $annict = Annict::from_session();
                 <a href="/mal_login.php">Login with MyAnimeList</a>
             <?php else: ?>
                 <p>MyAnimeList: @<?= $mal->username ?>でログイン中</p>
-                <button id="start" data-csrf="<?= get_csrf_token(); ?>">同期開始</button><pre id="log"></pre><script src="/sync.js"></script>
+                <button id="start" data-csrf="<?= get_csrf_token(); ?>">同期開始</button>
+                <pre id="log"></pre>
+                <script src="/sync.js?ver=2"></script>
             <?php endif; ?>
         <?php endif; ?>
     </body>

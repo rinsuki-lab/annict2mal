@@ -14,7 +14,7 @@ $res = json_decode($client->get("https://api.myanimelist.net/v2/users/@me/animel
 ])->getBody());
 
 $res = array_map(function ($input) {
-    return $input->node->id;
+    return ["id" => $input->node->id, "title" => $input->node->title];
 }, $res->data);
 
 header("Content-Type: application/json; charset=UTF-8");

@@ -12,6 +12,7 @@ $annict = Annict::from_session();
     </head>
     <body>
         <h1>annict2mal</h1>
+        <p><a href="https://twitter.com/intent/tweet?text=annict2mal&url=https://annict2mal.herokuapp.com/&hashtags=annict2mal">Tweet</a>・<a href="https://github.com/rinsuki-lab/annict2mal">GitHub</a></p>
         <p>Annictの「視聴済み」作品の情報をMyAnimeListにコピーします</p>
         <p>MyAnimeList側で「視聴済み」にした作品数が1000件を越えると正しく動かないかもしれません</p>
         <?php if ($annict === null): ?>
